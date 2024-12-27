@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import aeroplane from "../assets/aeroplane.png";
+import earth from "../assets/earth.png"
 const Signup = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,17 +24,49 @@ const Signup = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-white to-gray-100  flex items-center justify-center p-7">
+    <div className="relative min-h-screen bg-gradient-to-b from-white to-gray-100  flex items-center justify-center p-7 overflow-hidden">
 
-      
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 200 100"
+    className="absolute top-[100px] left-0 w-40 sm:w-48 md:w-56 lg:w-64 z-0 animate-wiggle"
+  >
+  
+    <circle cx="50" cy="50" r="30" fill="#DFF2FF" />
+    <circle cx="80" cy="50" r="40" fill="#DFF2FF" />
+    <circle cx="110" cy="60" r="30" fill="#DFF2FF" />
+    <circle cx="140" cy="50" r="40" fill="#DFF2FF" />
+    <circle cx="170" cy="50" r="30" fill="#DFF2FF" />
+ 
+  </svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 200 100"
+    className="absolute top-16 left-[150px] w-40 sm:w-48 md:w-56 lg:w-64 z-10 animate-wiggle"
+  >
+  
+    <circle cx="50" cy="50" r="30" fill="#F5F7F7" />
+    <circle cx="80" cy="50" r="40" fill="#F5F7F7" />
+    <circle cx="110" cy="60" r="30" fill="#F5F7F7" />
+    <circle cx="140" cy="50" r="40" fill="#F5F7F7" />
+    <circle cx="170" cy="50" r="30" fill="#F5F7F7" />
+ 
+  </svg>
          <img 
     src={aeroplane}
     alt="Aeroplane" 
-    class="absolute transform top-[70px] w-32 sm:w-40 md:w-48 lg:w-56 z-0 animate-move-left-to-right"
+    class="absolute transform top-[110px] w-32 sm:w-40 md:w-48 lg:w-56 z-10 animate-move-left-to-right"
      />
+      <img 
+    src={earth}
+    alt="Aeroplane" 
+    class="absolute bottom-0 "
+     />
+
+
      
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md z-10">
-        <h2 className="text-2xl font-bold text-center text-gray-600">Sign Up</h2>
+      <div className="bg-white/60 backdrop-blur 0 p-8 rounded-lg shadow-xl w-full max-w-md z-20">
+        <h2 className="text-2xl font-bold text-center text-gray-800">Sign Up</h2>
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <div>
             <label htmlFor="name" className="block text-md font-medium text-gray-700">
@@ -51,7 +84,7 @@ const Signup = () => {
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-md font-medium text-gray-700">
+            <label htmlFor="email" className="block text-md font-medium text-gray-800">
               Email
             </label>
             <input
@@ -65,7 +98,7 @@ const Signup = () => {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-md font-medium text-gray-700">
+            <label htmlFor="password" className="block text-md font-medium text-gray-800">
               Password
             </label>
             <input
